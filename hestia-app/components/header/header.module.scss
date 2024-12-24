@@ -1,0 +1,44 @@
+@import '../../src/app/assets/styles/variables.scss';
+@import '../../src/app/assets/styles/mixins.scss';
+
+.header-container{
+    @include flex-container(column, center, center, wrap);
+    position: fixed;
+    width: 100%;
+    color: $bg-color;
+    a {    
+        color: $bg-color;
+        text-decoration: none;
+    }
+    section{
+        width: 100%;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.logo-container {
+    padding:30px;
+    background-color: $wine1-color;
+    width: 100%;
+@include flex-container(column, center, center, wrap);
+}
+
+.nav-menu-container{
+    @include flex-container(column, center, center, wrap);
+    @include Neumorphism(0, #3c0813, ( inset 8px 8px 15px #330710,
+    inset -8px -8px 15px #450916));
+    width: 100%;
+    nav {
+    width: 50%;
+    padding: 10px;
+    }
+    ul {
+         list-style: none;
+        width: 100%;
+        @include flex-container(row, space-around, center, wrap);
+        
+    }
+}
